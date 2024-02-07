@@ -16,8 +16,8 @@ function calculateMoney(ticketSale){
 
 function checkName(name){
     const goodLetters = ['a', 'A', 'y', 'Y', 'i','I', 'e', 'E' , 'o', 'O' , 'u', 'U', 'w', 'W'];
-    const lastLetter = name.slice(-1);
     if(typeof name === "string"){
+        const lastLetter = name.slice(-1);
         if(goodLetters.includes(lastLetter)){
             return "Good Name";
         }
@@ -30,6 +30,10 @@ function checkName(name){
     }
 
 };
-// Incomplete
-// console.log(checkName("RAFEE"));
+// console.log(checkName(2));
 
+
+
+function deleteInvalids(array){
+    
+}
