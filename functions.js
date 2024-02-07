@@ -33,7 +33,19 @@ function checkName(name){
 // console.log(checkName(2));
 
 
-
 function deleteInvalids(array){
-    
+    if(Array.isArray(array)){
+        let numbers = [];
+        for (let element of array){
+            if(Number.isFinite(element)){
+                numbers.push(element);
+            }
+        }
+        return numbers;
+    }
+    else{
+        return "Invalid Array";
+    }
 }
+// const test = {num: [ 1 , 2 , 3 ]};
+// console.log(deleteInvalids(test));
