@@ -10,7 +10,7 @@ function calculateMoney(ticketSale){
     else{
         return "Invalid Number";
     }
-};
+}
 // console.log(calculateMoney(10));
 
 
@@ -29,7 +29,7 @@ function checkName(name){
         return "invalid";
     }
 
-};
+}
 // console.log(checkName(2));
 
 
@@ -47,5 +47,24 @@ function deleteInvalids(array){
         return "Invalid Array";
     }
 }
-// const test = {num: [ 1 , 2 , 3 ]};
+// const test = ["two", "four"];
 // console.log(deleteInvalids(test));
+
+
+function password(obj){
+    const siteName = obj.siteName;
+    const birthYear = obj.birthYear;
+    const name = obj.name;
+    if(siteName == undefined || birthYear == undefined || name == undefined || birthYear.toString().length !== 4 ){
+        return "invalid";
+    }
+    else{
+        const siteNameUpperCase = siteName.charAt(0).toUpperCase() + siteName.slice(1);
+        const result = siteNameUpperCase + "#" + name + "@" + birthYear;
+        return result; 
+    }
+}
+// const object = { name: "sohag" , birthYear: 1998 , siteName: "github" };
+// console.log(password(object));
+
+
